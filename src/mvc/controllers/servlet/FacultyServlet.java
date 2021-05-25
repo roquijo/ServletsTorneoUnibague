@@ -15,9 +15,11 @@ public class FacultyServlet extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.getRequestDispatcher("WEB-INF/views/faculty.jsp").forward(request, response);
+        ControllerForFaculty.ControllerForAddFaculty(faculty);
+
 
     }
 /*
