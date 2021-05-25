@@ -69,7 +69,6 @@
             }
             document.getElementById("tabla").innerHTML = list;
         }
-
     </script>
 
 </head>
@@ -150,7 +149,8 @@
                         </label>
 
 
-   <br> <br><br> <br>            <button type="submit" class="btn btn-success">Agregar</button>
+   <br> <br><br> <br>
+                     <button type="submit" class="btn btn-success">Agregar</button>
 
                     </form>
             </div>
@@ -166,9 +166,8 @@
                     </label>
 
 
-      <br> <br>              <button type="submit" class="btn btn-danger">Eliminar</button>
-
-
+      <br> <br>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
                 </form>
             </div>
             <div class="col">

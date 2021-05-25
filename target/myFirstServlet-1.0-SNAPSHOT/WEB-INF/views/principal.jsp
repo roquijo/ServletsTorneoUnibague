@@ -39,9 +39,8 @@
             </div>
         </nav>
 
-    <h1>Bienvenido ${user} ! </h1>
 
-    <p> ${pageContext.request.contextPath}</p>
-    <img  src="${pageContext.request.contextPath}/WEB-INF/views/banner.png" id="banner" alt="Image" class="img-fluid">
+    <img  src="${pageContext.request.contextPath}/images/banner.png" id="banner" alt="Image" class="img-fluid">
+
     </body>
     </html>
