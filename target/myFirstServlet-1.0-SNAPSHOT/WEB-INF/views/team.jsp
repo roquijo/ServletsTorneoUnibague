@@ -110,13 +110,86 @@
     </div>
 </nav>
 
-     <div class="btn-group">
-        <button type="button" class="btn">Agregar</button>
-        <button type="button" class="btn">Eliminar</button>
-        <button type="button" class="btn">Modificar</button>
+    <!-- opciones -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                 <h2>Agregar Equipo</h2>
+                 <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Nombre :
+                         <input type="text" name="txtNombreEquipo" class="form-control"/>
+                     </label>
+
+                        <label>
+                            Capitan :
+                            <input type="text" name="txtCapitan" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Id de la Facultad :
+                            <input type="text" name="txtIdFacultad" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Ruta Imagen :
+                            <input type="text" name="txtRutaImagenEquipo" class="form-control"/>
+                        </label>
+
+                        <button type="submit" class="btn btn-success">Agregar</button>
+
+                    </form>
+            </div>
+
+            <div class="col">
+                <h2>Eliminar Equipor</h2>
+                <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Identificador :
+                         <input type="text" name="txtIdEliminarEquipo" class="form-control"/>
+
+                    </label>
+
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+
+
+                </form>
+            </div>
+            <div class="col">
+               <h2>Modificar Equipo</h2>
+                <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Identificador :
+                         <input type="text" name="txtIdModificarEquipo" class="form-control"/>
+
+                    </label>
+
+                    <label>
+                         Nuevo nombre :
+                         <input type="text" name="txtNuevoNombreEquipo" class="form-control"/>
+
+                    </label>
+
+                    <label>
+                        Nuevo Capitan :
+                        <input type="text" name="txtNuevoCapitan" class="form-control"/>
+                    </label>
+
+                    <button type="submit" class="btn btn-warning">Modificar</button>
+
+                </form>
+
+            </div>
+        </div>
     </div>
+
     <table class="tabla" id="tabla"></table>
-
-
 </body>
 </html>

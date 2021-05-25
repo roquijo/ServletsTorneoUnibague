@@ -43,6 +43,7 @@
             border: 1px solid black;
 
         }
+
     </style>
 
     <script type="text/javascript">
@@ -62,16 +63,12 @@
                 document.getElementById("tabla").innerHTML = list;
         }
 
-        var myModal = document.getElementById('staticBackdrop')
-        var myInput = document.getElementById('btnAgregar')
 
-        myModal.addEventListener('shown.bs.modal', function () {
-            myInput.focus()
-        })
     </script>
 </head>
 
 <body>
+
 <!--NavBar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -108,35 +105,92 @@
         </div>
     </nav>
 
-    <div class="btn-group">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="staticBackdrop" id="btnAgregar">Agregar</button>
-        <button type="button" class="btn">Eliminar</button>
-        <button type="button" class="btn">Modificar</button>
-    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                 <h2>Agregar Facultad</h2>
+                 <form action="" method="post" class="form-control">
+                    <hr>
 
-    <table class="tabla" id="tabla"></table>
+                     <label>
+                         Nombre :
+                         <input type="text" name="txtNombreFacultad" class="form-control"/>
+                     </label>
+
+                        <label>
+                            Codigo :
+                            <input type="text" name="txtCodigoFacultad" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Identificador :
+                            <input type="text" name="txtIdFacultad" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Ruta Imagen :
+                            <input type="text" name="txtRutaImagenFacultad" class="form-control"/>
+                        </label>
+                        <br> <br>
+
+                        <button type="submit" class="btn btn-success">Agregar</button>
+
+                    </form>
+            </div>
+            <div class="col">
+                <h2>Eliminar Facultad</h2>
+                <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Identificador :
+                         <input type="text" name="FacultadtxtIdEliminar" class="form-control"/>
+
+                    </label>
+                    <br> <br>
+
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
-                </div>
+                </form>
+            </div>
+            <div class="col">
+               <h2>Modificar Facultad</h2>
+                <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Identificador :
+                         <input type="text" name="txtIdModificarFacultad" class="form-control"/>
+
+                    </label>
+
+                    <label>
+                         Nuevo nombre :
+                         <input type="text" name="txtNuevoNombreFacultad" class="form-control"/>
+
+                    </label>
+
+                    <label>
+                         Nuevo Codigo :
+                         <input type="text" name="txtNuevoCodigoFacultad" class="form-control"/>
+
+                    </label>
+                    <br> <br>
+
+                    <button type="submit" class="btn btn-warning">Modificar</button>
+
+                </form>
+
             </div>
         </div>
     </div>
 
-<img src="./banner.png" class="img-fluid" alt="">
+
+<table class="tabla" id="tabla"></table>
+
+
+
 
 </body>
 </html>

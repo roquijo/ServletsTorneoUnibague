@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -42,11 +41,6 @@
         {
             display: flex;
             justify-content: center;
-        }
-
-        ul
-        {
-            margin-left: 0;
         }
 
         .btn
@@ -116,14 +110,106 @@
         </div>
     </nav>
 
-    <div class="btn-group">
-        <button type="button" class="btn">Agregar</button>
-        <button type="button" class="btn">Eliminar</button>
-        <button type="button" class="btn">Modificar</button>
+    <!-- opciones -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                 <h2>Agregar Jugador</h2>
+                 <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Nombre :
+                         <input type="text" name="txtNombreJugador" class="form-control"/>
+                     </label>
+
+                        <label>
+                            identificador :
+                            <input type="text" name="txtIdoJugador" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Equipo :
+                            <input type="text" name="txtEquipoJugador" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Posicion :
+                            <input type="text" name="txtPosicionJugador" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Edad :
+                            <input type="text" name="txtEdadJugador" class="form-control"/>
+                        </label>
+
+                        <label>
+                            Ruta Imagen :
+                            <input type="text" name="txtRutaImagenJugador" class="form-control"/>
+                        </label>
+
+
+   <br> <br><br> <br>            <button type="submit" class="btn btn-success">Agregar</button>
+
+                    </form>
+            </div>
+            <div class="col">
+                <h2>Eliminar Jugador</h2>
+                <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Identificador :
+                         <input type="text" name="txtIdEliminarJugador" class="form-control"/>
+
+                    </label>
+
+
+      <br> <br>              <button type="submit" class="btn btn-danger">Eliminar</button>
+
+
+                </form>
+            </div>
+            <div class="col">
+               <h2>Modificar Jugador</h2>
+                <form action="" method="post" class="form-control">
+                    <hr>
+
+                     <label>
+                         Identificador :
+                         <input type="text" name="txtIdModificarJugador" class="form-control"/>
+
+                    </label>
+
+                    <label>
+                         Nuevo nombre :
+                         <input type="text" name="txtNuevoNombreJugador" class="form-control"/>
+
+                    </label>
+
+                    <label>
+                        Nueva Posicion :
+                        <input type="text" name="txtNuevaPosicionJugador" class="form-control"/>
+                    </label>
+
+                    <label>
+                        Nueva Edad :
+                        <input type="text" name="txtNuevaEdadJugador" class="form-control"/>
+                     </label>
+
+                     <br> <br>
+
+
+                    <button type="submit" class="btn btn-warning">Modificar</button>
+
+                </form>
+
+            </div>
+        </div>
     </div>
 
     <table class="tabla" id="tabla"></table>
-
 
 </body>
 </html>
