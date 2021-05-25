@@ -47,6 +47,12 @@
                 align-items: center;
                 margin-right: 25%;
             }
+            .imgLogin{
+                height: 160px;
+                width: 120px;
+                margin-left: 22%;
+
+            }
         </style>
     </head>
 
@@ -54,8 +60,9 @@
 
         <main class ="singin">
 
-            <form action="faculty.do" method="post">
+            <form  method="post">
 
+                <img src="https://static.vecteezy.com/system/resources/previews/001/199/877/original/silhouettes-soccer-png.png" id = "imgLogin" class="imgLogin" alt="imgLogin">
                 <h1 class="h2 mb-2 fw-normal">IDENTIFIQUESE</h1>
 
                 <div style="width: 30%">

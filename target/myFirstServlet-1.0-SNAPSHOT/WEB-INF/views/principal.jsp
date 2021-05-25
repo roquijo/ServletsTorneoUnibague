@@ -39,7 +39,7 @@
             </div>
         </nav>
 
-    <h1>Bienvenido al Torneo de Futbol </h1>
+    <h1>Bienvenido ${user} ! </h1>
 
     <p> ${pageContext.request.contextPath}</p>
     <img  src="${pageContext.request.contextPath}/WEB-INF/views/banner.png" id="banner" alt="Image" class="img-fluid">

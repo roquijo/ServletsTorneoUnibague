@@ -18,7 +18,7 @@ public class FacultyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("WEB-INF/views/faculty.jsp").forward(request, response);
     }
-/*
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -37,6 +37,5 @@ public class FacultyServlet extends HttpServlet {
             request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request, response);
         }
     }
-    */
 
 }
