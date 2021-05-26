@@ -17,7 +17,8 @@ public class PlayerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("players", ControllerForPlayer.ControllerForReadPlayerList());     
+        request.setAttribute("players", ControllerForPlayer.ControllerForReadPlayerList());
         request.getRequestDispatcher("WEB-INF/views/player.jsp").forward(request, response);
     }
+
 }

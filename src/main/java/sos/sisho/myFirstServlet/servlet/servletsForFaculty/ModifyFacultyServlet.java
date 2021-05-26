@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(urlPatterns = "/modify-player.do")
+@WebServlet(urlPatterns = "/modify-faculty.do")
 public class ModifyFacultyServlet extends HttpServlet {
 
     private static TodoService todoService = new TodoService();
@@ -22,7 +22,7 @@ public class ModifyFacultyServlet extends HttpServlet {
         int idFaculty = Integer.parseInt(request.getParameter("txtIdFacultad"));
         String name = request.getParameter("txtNuevoNombreFacultad");
         String code = request.getParameter("txtNuevoCodigoFacultad");
-        
+
         Faculty add = new Faculty(idFaculty, name, code, "imageFaculty");
         ControllerForFaculty.ControllerForUpdateFaculty(add);
         response.sendRedirect("faculty.do");

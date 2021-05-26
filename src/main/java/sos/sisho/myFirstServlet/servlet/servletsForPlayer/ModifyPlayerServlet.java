@@ -15,18 +15,18 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/modify-player.do")
 public class ModifyPlayerServlet extends HttpServlet {
 
-    private static TodoService todoService = new TodoService();
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("txtNuevoNombreJugador");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
         System.out.println(name);
-        String position = request.getParameter("txtNuevaPosicionJugador");
-        int age = Integer.parseInt(request.getParameter("txtNuevaEdadJugador"));
-        int idPlayer = Integer.parseInt(request.getParameter("txtIdModificarJugador"));
-        String nameTeam = request.getParameter("equipoJugador");
+        String position = request.getParameter("position");
+        int age = Integer.parseInt(request.getParameter("age"));
+        int idPlayer = Integer.parseInt(request.getParameter("idPlayer"));
+        String nameTeam = request.getParameter("nameOfTeam");
         Player add = new Player(idPlayer, name,position,age,nameTeam, "");
+        request.setAttribute("update", add);
         System.out.println(add);
-        ControllerForPlayer.ControllerForUpdatePlayer(add);
-        response.sendRedirect("player.do");
+        //ControllerForPlayer.ControllerForUpdatePlayer(add);
+        request.getRequestDispatcher("WEB-INF/views/player.jsp").forward(request, response);
     }
 }

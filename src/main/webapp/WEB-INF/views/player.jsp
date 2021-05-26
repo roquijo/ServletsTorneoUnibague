@@ -136,24 +136,24 @@
 
                      <label>
                          Identificador :
-                         <input type="text" name="txtIdModificarJugador" value="${idPlayer}" class="form-control"/>
+                         <input type="text" name="txtIdModificarJugador" value="${update.idPlayer}" class="form-control"/>
 
                     </label>
 
                     <label>
                          Nuevo nombre :
-                         <input type="text" name="txtNuevoNombreJugador" value="${name}" class="form-control"/>
+                         <input type="text" name="txtNuevoNombreJugador" value="${update.name}" class="form-control"/>
 
                     </label>
 
                     <label>
                         Nueva Posicion :
-                        <input type="text" name="txtNuevaPosicionJugador" value="${position}" class="form-control"/>
+                        <input type="text" name="txtNuevaPosicionJugador" value="${update.position}" class="form-control"/>
                     </label>
 
                     <label>
                         Nueva Edad :
-                        <input type="text" name="txtNuevaEdadJugador" value ="${age}"class="form-control"/>
+                        <input type="text" name="txtNuevaEdadJugador" value ="${update.age}"class="form-control"/>
                      </label>
 
                      <br> <br>
@@ -187,7 +187,7 @@
                 <td>${player.nameOfTeam}</td>
                 <td>${player.position}</td>
                 <td><a href="delete-player.do?idPlayer=${player.idPlayer}">Delete</a></td>
-                <td><a href="player.do?idPlayer=${player.idPlayer},name=${player.name},position=${player.position},nameOfTeam=${player.nameOfTeam},age=${player.age}">Update</a></td>
+                <td><a href="modify-player.do?idPlayer=${player.idPlayer},name=${player.name},position=${player.position},nameOfTeam=${player.nameOfTeam},age=${player.age}">Update</a></td>
             </tr>
         </c:forEach>
         </tbody>
