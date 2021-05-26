@@ -1,4 +1,4 @@
-package sos.sisho.myFirstServlet.servlet;
+package sos.sisho.myFirstServlet.servlet.servletsForFaculty;
 
 
 import client.collection.NodeList;

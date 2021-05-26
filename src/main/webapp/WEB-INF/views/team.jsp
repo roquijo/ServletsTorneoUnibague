@@ -53,26 +53,7 @@
 
     </style>
 
-    <script type="text/javascript">
 
-        let team = [["Ingenieria", "La mafia Rusa", "Juan",10], ["Derecho", "Los cerebritos", "Jose",20], ["Humanidades", "Los invencibles", "Mario",30]]
-
-        window.onload = function generarTabla(){
-
-            let list = "<thead><tr><th>iter</th><th>Facultad</th><th>Nombre</th><th>Capitan</th><th>Itentificador</th></tr></thead><tbody>"
-            for(let i = 0 ; i < team.length ; i++){
-                list+="<tr><td style='width: 100px;text-align: left;'>" +i+ "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + team[i][0] + "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + team[i][1] + "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + team[i][2] + "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + team[i][3] + "</td>";
-                list+="</tr>";
-
-             }
-                document.getElementById("tabla").innerHTML = list;
-        }
-
-    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -105,7 +86,6 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
-
         </div>
     </div>
 </nav>
@@ -143,23 +123,6 @@
 
                     </form>
             </div>
-
-            <div class="col">
-                <h2>Eliminar Equipor</h2>
-                <form action="" method="post" class="form-control">
-                    <hr>
-
-                     <label>
-                         Identificador :
-                         <input type="text" name="txtIdEliminarEquipo" class="form-control"/>
-
-                    </label>
-
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
-
-
-                </form>
-            </div>
             <div class="col">
                <h2>Modificar Equipo</h2>
                 <form action="" method="post" class="form-control">
@@ -190,6 +153,25 @@
         </div>
     </div>
 
-    <table class="tabla" id="tabla"></table>
+    <table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Captain</th>
+        <th scope="col">Id Faculty</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <c:forEach items="${teams}" var="team">
+        <tr>
+            <td>${team.name}</td>
+            <td>${team.captain}</td>
+            <td>${team.idFaculty}</td>
+        </tr>
+    </c:forEach>
+
+    </tbody>
+</table>
 </body>
 </html>

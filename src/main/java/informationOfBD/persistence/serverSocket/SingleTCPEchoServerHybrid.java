@@ -56,7 +56,7 @@ public class SingleTCPEchoServerHybrid extends Thread{
 
                     Entity<Dto> entity = new Entity<>(sql.getEntity());
                     NodeList<?> nodeList = (NodeList<?>) Operation.doOperation(sql, entity);
-                    out.writeObject( nodeList);
+                    out.writeObject(nodeList);
                 }
             }while(sql.getOperation() != TypeOperation.EXIT);
 

@@ -51,25 +51,7 @@
 
     </style>
 
-    <script type="text/javascript">
 
-        let players = [["Juan Esteban Gomez",2220191007,19, "Deportivo Tapitas", "Delantero"], ["Juan Pablo Meneses",2220191009,19, "100 de Cilantro", "Arquero"], ["Jorge Eliecer Rojas",2220191003,19, "Tinto Frio", "Defensa"]]
-
-        window.onload = function generarTabla(){
-
-            let list = "<thead><tr><th>iter</th><th>Nombre</th><th>Id</th><th>Edad</th><th>Equipo</th><th>Posicion</th></tr></thead><tbody>"
-            for(let i = 0 ; i < players.length ; i++){
-                list+="<tr><td style='width: 100px;text-align: left;'>" +i+ "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + players[i][0] + "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + players[i][1] + "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + players[i][2]+ "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + players[i][3] + "</td>";
-                list+="<td style='width: 100px;text-align: left;'>" + players[i][4]+ "</td>";
-                list+="</tr>";
-            }
-            document.getElementById("tabla").innerHTML = list;
-        }
-    </script>
 
 </head>
 <body>
@@ -115,92 +97,68 @@
         <div class="row">
             <div class="col">
                  <h2>Agregar Jugador</h2>
-                 <form action="" method="post" class="form-control">
+                 <form action="add-player.do" method="post" class="form-control">
                     <hr>
 
                      <label>
                          Nombre :
-                         <input type="text" name="txtNombreJugador" class="form-control"/>
+                         <input type="text" name="nombreJugador" class="form-control"/>
                      </label>
 
                         <label>
                             identificador :
-                            <input type="text" name="txtIdoJugador" class="form-control"/>
+                            <input type="text" name="idJugador" class="form-control" />
                         </label>
 
                         <label>
                             Equipo :
-                            <input type="text" name="txtEquipoJugador" class="form-control"/>
+                            <input type="text" name="equipoJugador" class="form-control"/>
                         </label>
 
                         <label>
                             Posicion :
-                            <input type="text" name="txtPosicionJugador" class="form-control"/>
+                            <input type="text" name="posicionJugador" class="form-control"/>
                         </label>
 
                         <label>
                             Edad :
-                            <input type="text" name="txtEdadJugador" class="form-control"/>
+                            <input type="text" name="edad" class="form-control"/>
                         </label>
-
-                        <label>
-                            Ruta Imagen :
-                            <input type="text" name="txtRutaImagenJugador" class="form-control"/>
-                        </label>
-
-
-   <br> <br><br> <br>
-                     <button type="submit" class="btn btn-success">Agregar</button>
-
+            <br> <br>
+                     <button type="submit"  class="btn btn-warning">Agregar</button>
                     </form>
             </div>
-            <div class="col">
-                <h2>Eliminar Jugador</h2>
-                <form action="" method="post" class="form-control">
-                    <hr>
 
-                     <label>
-                         Identificador :
-                         <input type="text" name="txtIdEliminarJugador" class="form-control"/>
-
-                    </label>
-
-
-      <br> <br>
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
-                </form>
-            </div>
             <div class="col">
                <h2>Modificar Jugador</h2>
-                <form action="" method="post" class="form-control">
+                <form action="modify-player.do" method="post" class="form-control">
                     <hr>
 
                      <label>
                          Identificador :
-                         <input type="text" name="txtIdModificarJugador" class="form-control"/>
+                         <input type="text" name="txtIdModificarJugador" value="${idPlayer}" class="form-control"/>
 
                     </label>
 
                     <label>
                          Nuevo nombre :
-                         <input type="text" name="txtNuevoNombreJugador" class="form-control"/>
+                         <input type="text" name="txtNuevoNombreJugador" value="${name}" class="form-control"/>
 
                     </label>
 
                     <label>
                         Nueva Posicion :
-                        <input type="text" name="txtNuevaPosicionJugador" class="form-control"/>
+                        <input type="text" name="txtNuevaPosicionJugador" value="${position}" class="form-control"/>
                     </label>
 
                     <label>
                         Nueva Edad :
-                        <input type="text" name="txtNuevaEdadJugador" class="form-control"/>
+                        <input type="text" name="txtNuevaEdadJugador" value ="${age}"class="form-control"/>
                      </label>
 
                      <br> <br>
 
-
-                    <button type="submit" class="btn btn-warning">Modificar</button>
+                    <button type="submit"  class="btn btn-warning">Modificar</button>
 
                 </form>
 
@@ -208,7 +166,32 @@
         </div>
     </div>
 
-    <table class="tabla" id="tabla"></table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Id Player</th>
+            <th scope="col">Age</th>
+            <th scope="col">Name of team</th>
+            <th scope="col">Position</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${players}" var="player">
+            <tr>
+                <td>${player.name}</td>
+                <td>${player.idPlayer}</td>
+                <td>${player.age}</td>
+                <td>${player.nameOfTeam}</td>
+                <td>${player.position}</td>
+                <td><a href="delete-player.do?idPlayer=${player.idPlayer}">Delete</a></td>
+                <td><a href="player.do?idPlayer=${player.idPlayer},name=${player.name},position=${player.position},nameOfTeam=${player.nameOfTeam},age=${player.age}">Update</a></td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
 
 </body>
 </html>

@@ -139,7 +139,7 @@
                 </label>
                 <br> <br>
 
-                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <button type="submit" href="faculty.do?idFaculty=${todo.uuid}" class="btn btn-danger">Eliminar</button>
 
 
             </form>
@@ -183,6 +183,7 @@
         <th scope="col">Name</th>
         <th scope="col">Code</th>
         <th scope="col">Id Faculty</th>
+        <th scope="col">Delete</th>
     </tr>
     </thead>
     <tbody>
@@ -192,6 +193,7 @@
                 <td>${facul.name}</td>
                 <td>${facul.code}</td>
                 <td>${facul.idFaculty}</td>
+                <td><a href="delete-faculty.do?idFaculty=${facul.idFaculty}">Delete</a></td>
         </tr>
         </c:forEach>
 

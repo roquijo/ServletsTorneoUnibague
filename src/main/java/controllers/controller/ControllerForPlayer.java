@@ -10,6 +10,9 @@ import informationOfBD.dto.Dto;
 import informationOfBD.dto.PlayerDto;
 import informationOfBD.persistence.serverSocket.TypeOperation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ControllerForPlayer {
 
@@ -50,5 +53,18 @@ public class ControllerForPlayer {
         PlayerDao playerDao = new PlayerDao();
 
         return playerDao.read(player);
+    }
+
+    public static List<Player> ControllerForReadPlayerList() {
+
+        NodeList<Player> lista= ControllerForReadPlayer();
+        List<Player> listCast = new ArrayList<>();
+
+        if(!lista.isEmpty()){
+            for (int i = 0; i < lista.getSize(); i++) {
+                listCast.add(lista.pop(i));
+            }
+        }
+        return listCast;
     }
 }

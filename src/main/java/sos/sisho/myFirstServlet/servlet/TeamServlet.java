@@ -1,5 +1,7 @@
 package sos.sisho.myFirstServlet.servlet;
 
+import controllers.controller.ControllerForTeam;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.ServletException;
@@ -15,6 +17,7 @@ public class TeamServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+       request.setAttribute("teams", ControllerForTeam.ControllerForReadTeam());
         request.getRequestDispatcher("WEB-INF/views/team.jsp").forward(request, response);
         
 

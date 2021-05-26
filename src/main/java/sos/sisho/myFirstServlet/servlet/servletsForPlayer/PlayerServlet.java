@@ -1,4 +1,7 @@
-package sos.sisho.myFirstServlet.servlet;
+package sos.sisho.myFirstServlet.servlet.servletsForPlayer;
+
+import controllers.controller.ControllerForFaculty;
+import controllers.controller.ControllerForPlayer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +17,7 @@ public class PlayerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.setAttribute("players", ControllerForPlayer.ControllerForReadPlayerList());     
         request.getRequestDispatcher("WEB-INF/views/player.jsp").forward(request, response);
     }
 }
