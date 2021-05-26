@@ -1,6 +1,8 @@
 package sos.sisho.myFirstServlet.servlet;
 
 
+import client.collection.NodeList;
+import client.dto.Faculty;
 import controllers.controller.ControllerForFaculty;
 import sos.sisho.myFirstServlet.user.service.UserService;
 
@@ -17,13 +19,12 @@ public class FacultyServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("faculties", ControllerForFaculty.ControllerForReadFaculty());
+        request.setAttribute("faculties", ControllerForFaculty.ControllerForReadFacultyList());
         request.getRequestDispatcher("WEB-INF/views/faculty.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         //request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request,response);
     }
 

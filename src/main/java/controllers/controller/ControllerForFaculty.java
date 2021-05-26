@@ -7,6 +7,9 @@ import client.dto.Faculty;
 import client.dto.Player;
 import informationOfBD.persistence.serverSocket.TypeOperation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ControllerForFaculty {
     
@@ -42,4 +45,17 @@ public class ControllerForFaculty {
 
          return facultyDao.read(facultyDto);
      }
+     
+    public static List<Faculty> ControllerForReadFacultyList() {
+        
+         NodeList<Faculty> lista= ControllerForReadFaculty();
+         List<Faculty> listCast = new ArrayList<>();
+
+         if(!lista.isEmpty()){
+            for (int i = 0; i < lista.getSize(); i++) {
+                listCast.add(lista.pop(i));
+            }
+        }
+        return listCast;
+    }
 }
