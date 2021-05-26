@@ -5,7 +5,7 @@ import mvc.graphics.banner.PanelBanner;
 import mvc.graphics.faculty.FacultyPanel;
 import mvc.graphics.player.PlayerPanel;
 import mvc.graphics.team.TeamPanel;
-
+///Mene
 import javax.swing.*;
 import java.awt.*;
 
