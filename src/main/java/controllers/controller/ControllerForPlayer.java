@@ -6,8 +6,6 @@ import client.dao.PlayerDao;
 import client.dto.Faculty;
 import client.dto.Player;
 import mvc.graphics.player.PlayerInfoPanel;
-import informationOfBD.dto.Dto;
-import informationOfBD.dto.PlayerDto;
 import informationOfBD.persistence.serverSocket.TypeOperation;
 
 import java.util.ArrayList;

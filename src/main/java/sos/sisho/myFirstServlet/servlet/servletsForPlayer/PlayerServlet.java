@@ -20,5 +20,4 @@ public class PlayerServlet extends HttpServlet {
         request.setAttribute("players", ControllerForPlayer.ControllerForReadPlayerList());
         request.getRequestDispatcher("WEB-INF/views/player.jsp").forward(request, response);
     }
-
 }
