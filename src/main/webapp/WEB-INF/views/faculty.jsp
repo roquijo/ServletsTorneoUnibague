@@ -97,8 +97,8 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2>Agregar Facultad</h2>
-            <form action="" method="post" class="form-control">
+            <h2 text-align="center">Agregar Facultad</h2>
+            <form action="add-faculty.do" method="post" class="form-control">
                 <hr>
 
                 <label>
@@ -116,10 +116,6 @@
                     <input type="text" name="txtIdFacultad" class="form-control"/>
                 </label>
 
-                <label>
-                    Ruta Imagen :
-                    <input type="text" name="txtRutaImagenFacultad" class="form-control"/>
-                </label>
                 <br> <br>
 
                 <button type="submit" class="btn btn-success">Agregar</button>
@@ -128,26 +124,8 @@
         </div>
 
         <div class="col">
-            <h2>Eliminar Facultad</h2>
-            <form action="" method="post" class="form-control">
-                <hr>
-
-                <label>
-                    Identificador :
-                    <input type="text" name="FacultadtxtIdEliminar" class="form-control"/>
-
-                </label>
-                <br> <br>
-
-                <button type="submit" href="faculty.do?idFaculty=${todo.uuid}" class="btn btn-danger">Eliminar</button>
-
-
-            </form>
-        </div>
-
-        <div class="col">
             <h2>Modificar Facultad</h2>
-            <form action="" method="post" class="form-control">
+            <form action="modify-faculty.do" method="post" class="form-control">
                 <hr>
 
                 <label>
@@ -184,6 +162,7 @@
         <th scope="col">Code</th>
         <th scope="col">Id Faculty</th>
         <th scope="col">Delete</th>
+        <th scope="col">Update</th>
     </tr>
     </thead>
     <tbody>
@@ -194,6 +173,7 @@
                 <td>${facul.code}</td>
                 <td>${facul.idFaculty}</td>
                 <td><a href="delete-faculty.do?idFaculty=${facul.idFaculty}">Delete</a></td>
+                <td><a href="faculty.do?idFaculty=${facul.idFaculty},name=${facul.name},code=${facul.code}">Update</a></td>
         </tr>
         </c:forEach>
 
