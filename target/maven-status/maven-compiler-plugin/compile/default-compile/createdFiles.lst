@@ -1,7 +1,13 @@
-sos\sisho\myFirstServlet\todo\controller\DeleteTodoServlet.class
-sos\sisho\myFirstServlet\LoginServlet.class
-sos\sisho\myFirstServlet\user\service\UserService.class
-sos\sisho\myFirstServlet\todo\controller\TodoServlet.class
+sos\sisho\myFirstServlet\servlet\PlayerServlet.class
+sos\sisho\myFirstServlet\filter\LoginRequiredFilter.class
 sos\sisho\myFirstServlet\todo\service\TodoService.class
+sos\sisho\myFirstServlet\servlet\FacultyServlet.class
+sos\sisho\myFirstServlet\todo\controller\DeleteTodoServlet.class
+sos\sisho\myFirstServlet\servlet\PrincipalServlet.class
+sos\sisho\myFirstServlet\todo\controller\ListTodoServlet.class
+sos\sisho\myFirstServlet\user\service\UserService.class
+sos\sisho\myFirstServlet\servlet\LoginServlet.class
+sos\sisho\myFirstServlet\servlet\TeamServlet.class
 sos\sisho\myFirstServlet\todo\domain\Todo.class
 sos\sisho\myFirstServlet\user\domain\User.class
+sos\sisho\myFirstServlet\todo\controller\AddTodoServlet.class

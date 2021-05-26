@@ -19,26 +19,14 @@ public class FacultyServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("faculties", null);
         request.getRequestDispatcher("WEB-INF/views/faculty.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String user = request.getParameter("user");
-        String password = request.getParameter("password");
-
-        boolean userValid = userService.isUserValid(user,password);
-
-        if( userValid){
-            request.getSession().setAttribute("user", user);
-            response.sendRedirect("todo.do");
-
-        }
-        else{
-            request.setAttribute("errorMessage", "Invalid Credentials");
-            request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request, response);
-        }
+        request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request,response);
     }
 
 }

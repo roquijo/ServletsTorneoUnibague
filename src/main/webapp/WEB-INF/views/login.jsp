@@ -64,7 +64,7 @@
 
                 <img src="https://static.vecteezy.com/system/resources/previews/001/199/877/original/silhouettes-soccer-png.png" id = "imgLogin" class="imgLogin" alt="imgLogin">
                 <h1 class="h2 mb-2 fw-normal">IDENTIFIQUESE</h1>
-
+                <p style="color: red"> ${errorMessage}</p>
                 <div style="width: 30%">
                     <label>Usuario:</label>
                 </div>

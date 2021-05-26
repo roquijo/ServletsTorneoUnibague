@@ -7,7 +7,7 @@
     <display-name>myFirstServlet</display-name>
 
     <welcome-file-list>
-    <welcome-file>faculty.do</welcome-file>
+        <welcome-file>faculty.do</welcome-file>
         <welcome-file>login.do</welcome-file>
     </welcome-file-list>
 </web-app>

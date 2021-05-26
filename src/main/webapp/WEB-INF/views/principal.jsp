@@ -26,7 +26,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="alert('Proyecto Desarollado Por Jorge, Juan Pablo y Juan Esteban')">Acerca de</a>
+                            <a class="nav-link" href="#" onclick="alert('Proyecto Desarollado Por Jorge Rojas, Juan Meneses y Juan Gomez')">Acerca de</a>
                         </li>
                     </ul>
 
@@ -38,7 +38,6 @@
                 </div>
             </div>
         </nav>
-
 
     <img  src="${pageContext.request.contextPath}/images/banner.png" id="banner" alt="Image" class="img-fluid">
 
