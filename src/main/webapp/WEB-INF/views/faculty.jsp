@@ -48,7 +48,7 @@
 
     <script type="text/javascript">
 
-        let facul = [["Ingenieria", 11, 100], ["Derecho",22,200],["Humanidades", 33,300]]
+        let facul ="${faculties}"
 
         window.onload = function generarTabla(){
 

@@ -14,14 +14,13 @@ public class DataSource {
 		Properties conProperties = new Properties();
 
 		try {
-			conProperties.load(new FileInputStream("src/server/persistence/data/connection.properties"));
-
-			String url = conProperties.getProperty("url");
-			String user = conProperties.getProperty("user");
-			String password = conProperties.getProperty("password");
+			//conProperties.load(new FileInputStream("src/main/java/informationOfBD/persistence/data/connection.properties"));
+			Class.forName("org.postgresql.Driver");
+			String url = "jdbc:postgresql://localhost:5432/postgres"; //conProperties.getProperty("url"); //
+			String user = "postgres";//conProperties.getProperty("user"); //
+			String password = "jorgerojas123";//conProperties.getProperty("password"); //
 
 			con = DriverManager.getConnection(url.trim(), user.trim(), password.trim());
-
 
 			System.out.println("Successful connection");	
 

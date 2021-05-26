@@ -10,7 +10,6 @@ public class ControllerForInterface {
     public static void getInstance(){
 
         if(controllerForInterface == null){
-            new InterfaceTournament();
             ControllerForClient.getInstance(null);
         }
     }
