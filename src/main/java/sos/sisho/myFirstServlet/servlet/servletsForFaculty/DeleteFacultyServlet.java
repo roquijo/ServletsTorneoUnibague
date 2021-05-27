@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 //Mene
+//
 
 @WebServlet(urlPatterns = "/delete-faculty.do")
 public class DeleteFacultyServlet extends HttpServlet {
