@@ -1,7 +1,7 @@
 package sos.sisho.myFirstServlet.servlet.servletsForFaculty;
 
 import controllers.controller.ControllerForFaculty;
-import sos.sisho.myFirstServlet.todo.service.TodoService;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +14,6 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/delete-faculty.do")
 public class DeleteFacultyServlet extends HttpServlet {
 
-    private static TodoService todoService = new TodoService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("idFaculty");

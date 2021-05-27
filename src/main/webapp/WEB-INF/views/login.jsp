@@ -2,58 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <html>
     <head>
+
+        <link href="webjars/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
         <title>Torneo De Futbol Unibague</title>
+        <link href="resources/login.css" rel="StyleSheet" type="text/css">
 
-        <style>
-
-            body {
-                height: 100%;
-            }
-
-            body {
-                display: flex;
-                align-items: center;
-                background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
-            }
-
-            .singin {
-
-                width: 100%;
-                max-width: 330px;
-                padding: 15px;
-                margin: auto;
-            }
-
-            .singin .form-floating:focus-within {
-                z-index: 2;
-            }
-
-            .form-floating{
-                margin-top:2px;
-                margin-bottom:5px;
-            }
-
-            .btnIngreso{
-                margin-top:20px;
-                padding: 5px;
-                display: flex;
-                justify-content: center;
-            }
-
-            .btn
-            {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 25%;
-            }
-            .imgLogin{
-                height: 160px;
-                width: 120px;
-                margin-left: 22%;
-
-            }
-        </style>
     </head>
 
     <body class="text-center">

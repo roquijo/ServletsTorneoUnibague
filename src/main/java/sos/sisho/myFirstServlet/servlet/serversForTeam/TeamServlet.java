@@ -1,5 +1,6 @@
 package sos.sisho.myFirstServlet.servlet.serversForTeam;
 
+import controllers.controller.ControllerForFaculty;
 import controllers.controller.ControllerForTeam;
 
 import javax.servlet.annotation.WebServlet;
@@ -17,10 +18,8 @@ public class TeamServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-       request.setAttribute("teams", ControllerForTeam.ControllerForReadTeam());
+       request.setAttribute("faculties", ControllerForFaculty.ControllerForReadFacultyList());
+       request.setAttribute("teams", ControllerForTeam.ControllerForReadTeamList());
         request.getRequestDispatcher("WEB-INF/views/team.jsp").forward(request, response);
-        
-
     }
-    
 }

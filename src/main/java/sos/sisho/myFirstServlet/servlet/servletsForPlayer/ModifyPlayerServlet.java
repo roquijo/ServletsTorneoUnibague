@@ -2,7 +2,7 @@ package sos.sisho.myFirstServlet.servlet.servletsForPlayer;
 
 import client.dto.Player;
 import controllers.controller.ControllerForPlayer;
-import sos.sisho.myFirstServlet.todo.service.TodoService;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
-
 
 @WebServlet(urlPatterns = "/modify-player.do")
 public class ModifyPlayerServlet extends HttpServlet {
@@ -38,7 +37,6 @@ public class ModifyPlayerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String name = request.getParameter("txtNuevoNombreJugador");
-        System.out.println(name);
         String position = request.getParameter("txtNuevaPosicionJugador");
         int age = Integer.parseInt(request.getParameter("txtNuevaEdadJugador"));
         int idPlayer = Integer.parseInt(request.getParameter("txtIdModificarJugador"));
@@ -47,6 +45,5 @@ public class ModifyPlayerServlet extends HttpServlet {
         System.out.println(add);
         ControllerForPlayer.ControllerForUpdatePlayer(add);
         response.sendRedirect("player.do");
-
     }
 }

@@ -3,55 +3,9 @@
 
 <html>
 <head>
+
     <link href="webjars/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Jugadores</title>
-
-    <style>
-
-        .tabla
-        {
-            background-color: lightblue;
-            text-align: center;
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 0.5%;
-            margin-right: 0;
-            padding: 0;
-        }
-
-        th, td{
-            border: solid 1px black;
-            padding: 20px;
-        }
-
-        thead
-        {
-            background-color: #06bbc2;
-            border-bottom: solid 3px;
-            color: black;
-        }
-
-
-        li
-        {
-            list-style: none;
-        }
-
-        .btn-group
-        {
-            display: flex;
-            justify-content: center;
-        }
-
-        .btn
-        {
-            background-color: #06bbc2;
-            border: 1px solid black;
-        }
-
-    </style>
-
-
 
 </head>
 <body>
@@ -112,7 +66,12 @@
 
                         <label>
                             Equipo :
-                            <input type="text" name="equipoJugador" class="form-control"/>
+                            <select class="form-select" name="equipoJugador" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <c:forEach items="${teams}" var="team">
+                                        <option>${team.name}</option>
+                                </c:forEach>
+                            </select>
                         </label>
 
                         <label>
@@ -136,7 +95,7 @@
 
                      <label>
                          Identificador :
-                         <input type="text" name="txtIdModificarJugador" value="${update.idPlayer}" class="form-control"/>
+                         <input type="text" name="txtIdModificarJugador" value="${update.idPlayer}" readonñl class="form-control"/>
 
                     </label>
 

@@ -2,59 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <link href="webjars/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Facultades</title>
+    <link href="resources/faculty.css" rel="StyleSheet" type="text/css">
 
-    <style>
-        .tabla
-        {
-            background-color: lightblue;
-            text-align: center;
-            border-collapse: collapse;
-            width:100%;
-            margin-top: 0.5%;
-        }
-
-        th, td{
-            border: solid 1px black;
-            padding: 20px;
-        }
-
-        thead
-        {
-            background-color: #06bbc2;
-            border-bottom: solid 3px;
-            color: black;
-        }
-        li
-        {
-            list-style: none;
-        }
-
-        .btn-group
-        {
-            display: flex;
-            justify-content: center;
-        }
-
-        .btn
-        {
-            background-color: #06bbc2;
-            border: 1px solid black;
-
-        }
-
-    </style>
-
-    <script type="text/javascript">
-
-            window.onload = function generarTabla(){
-            let list = "<thead><tr><th>Nombre</th><tbody>"
-
-            document.getElementById("tabla").innerHTML = list;
-        }
-
-    </script>
 </head>
 
 <body>
@@ -129,20 +81,20 @@
                 <hr>
 
                 <label>
-                    Identificador :
-                    <input type="text" name="txtIdModificarFacultad" class="form-control"/>
+                    Identificador de la Facultad :
+                    <input type="text" name="txtIdModificarFacultad" value= "${update.idFaculty}" readonly="readonly" class="form-control"/>
 
                 </label>
 
                 <label>
                     Nuevo nombre :
-                    <input type="text" name="txtNuevoNombreFacultad" class="form-control"/>
+                    <input type="text" name="txtNuevoNombreFacultad" value= "${update.name}" class="form-control"/>
 
                 </label>
 
                 <label>
                     Nuevo Codigo :
-                    <input type="text" name="txtNuevoCodigoFacultad" class="form-control"/>
+                    <input type="text" name="txtNuevoCodigoFacultad" value="${update.code}" class="form-control"/>
 
                 </label>
                 <br> <br>
@@ -173,7 +125,7 @@
                 <td>${facul.code}</td>
                 <td>${facul.idFaculty}</td>
                 <td><a href="delete-faculty.do?idFaculty=${facul.idFaculty}">Delete</a></td>
-                <td><a href="faculty.do?idFaculty=${facul.idFaculty},name=${facul.name},code=${facul.code}">Update</a></td>
+                <td><a href="modify-faculty.do?idFaculty=${facul.idFaculty}">Update</a></td>
         </tr>
         </c:forEach>
 

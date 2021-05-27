@@ -1,6 +1,5 @@
 package sos.sisho.myFirstServlet.servlet;
 
-import sos.sisho.myFirstServlet.todo.service.TodoService;
 import sos.sisho.myFirstServlet.user.service.UserService;
 
 import javax.servlet.ServletException;
@@ -14,8 +13,7 @@ import java.io.IOException;
 public class LoginServlet  extends HttpServlet {
 
     private  final UserService userService = new UserService();
-    private  final TodoService todoService = new TodoService();
-
+    
 
 
     @Override

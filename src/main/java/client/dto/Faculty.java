@@ -49,7 +49,8 @@ public class Faculty implements Dto, Serializable {
     public String update() {
 
         String sql = "UPDATE public.faculty SET code= '"+ code
-                 +
+                 + "', name='" + name
+                +
                 "' WHERE id_faculty = '" + idFaculty + "'";
         System.out.println(sql);
         return sql;

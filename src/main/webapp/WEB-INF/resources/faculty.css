@@ -1,0 +1,38 @@
+.tabla
+{
+    background-color: lightblue;
+    text-align: center;
+    border-collapse: collapse;
+    width:100%;
+    margin-top: 0.5%;
+}
+
+th, td
+{
+    border: solid 1px black;
+    padding: 20px;
+}
+
+thead
+{
+    background-color: #06bbc2;
+    border-bottom: solid 3px;
+    color: black;
+}
+
+li
+{
+    list-style: none;
+}
+
+.btn-group
+{
+    display: flex;
+    justify-content: center;
+}
+
+.btn
+{
+    background-color: #06bbc2;
+    border: 1px solid black;
+}

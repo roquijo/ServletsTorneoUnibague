@@ -5,55 +5,6 @@
     <link href="webjars/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Team</title>
 
-    <style>
-
-        .tabla
-        {
-            background-color: lightblue;
-            text-align: center;
-            border-collapse: collapse;
-            width:100%;
-            margin-top: 0.5%;
-            margin-right: 0;
-            padding: 0;
-        }
-
-        th, td{
-            padding: 20px;
-            border: solid 1px black;
-        }
-
-        thead
-        {
-            background-color: #06bbc2;
-            border-bottom: solid 3px;
-            color: black;
-        }
-        li
-        {
-            list-style: none;
-        }
-
-        .btn-group
-        {
-            display: flex;
-            justify-content: center;
-        }
-
-        ul
-        {
-            margin-left: 0;
-        }
-
-        .btn
-        {
-            background-color: #06bbc2;
-            border: 1px solid black;
-        }
-
-    </style>
-
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -96,7 +47,7 @@
         <div class="row">
             <div class="col">
                  <h2>Agregar Equipo</h2>
-                 <form action="" method="post" class="form-control">
+                 <form action="add-team.do" method="post" class="form-control">
                     <hr>
 
                      <label>
@@ -111,12 +62,12 @@
 
                         <label>
                             Id de la Facultad :
-                            <input type="text" name="txtIdFacultad" class="form-control"/>
-                        </label>
-
-                        <label>
-                            Ruta Imagen :
-                            <input type="text" name="txtRutaImagenEquipo" class="form-control"/>
+                            <select class="form-select" name="idFaculty" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <c:forEach items="${faculties}" var="facul">
+                                        <option>${facul.idFaculty}</option>
+                                </c:forEach>
+                            </select>
                         </label>
 
                         <button type="submit" class="btn btn-success">Agregar</button>
@@ -125,24 +76,21 @@
             </div>
             <div class="col">
                <h2>Modificar Equipo</h2>
-                <form action="" method="post" class="form-control">
+                <form action="modify-team.do" method="post" class="form-control">
                     <hr>
-
-                     <label>
-                         Identificador :
-                         <input type="text" name="txtIdModificarEquipo" class="form-control"/>
-
-                    </label>
-
                     <label>
-                         Nuevo nombre :
-                         <input type="text" name="txtNuevoNombreEquipo" class="form-control"/>
-
+                        Nombre del equipo :
+                        <input type="text" value = "${update.name}" readonly="readonly" name="txtNameToModify" class="form-control"/>
                     </label>
 
                     <label>
                         Nuevo Capitan :
-                        <input type="text" name="txtNuevoCapitan" class="form-control"/>
+                        <input type="text" value = "${update.captain}" name="txtNuevoCapitan" class="form-control"/>
+                    </label>
+
+                    <label>
+                        id Facultad Perteneciente :
+                        <input type="text" value = "${update.idFaculty}" readonly="readonly"  name="txtidFaculty" class="form-control"/>
                     </label>
 
                     <button type="submit" class="btn btn-warning">Modificar</button>
@@ -162,12 +110,13 @@
     </tr>
     </thead>
     <tbody>
-
     <c:forEach items="${teams}" var="team">
         <tr>
             <td>${team.name}</td>
             <td>${team.captain}</td>
             <td>${team.idFaculty}</td>
+            <td><a href="delete-team.do?name=${team.name}">Delete</a></td>
+            <td><a href="modify-team.do?name=${team.name}">Update</a></td>
         </tr>
     </c:forEach>
 

@@ -7,6 +7,9 @@ import client.dto.Team;
 import mvc.graphics.team.TeamInfoPanel;
 import informationOfBD.persistence.serverSocket.TypeOperation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ControllerForTeam {
 
     private static TeamInfoPanel playerInfoPanel;
@@ -50,5 +53,18 @@ public class ControllerForTeam {
         TeamDao TeamDao = new TeamDao();
 
         return TeamDao.read(TeamDto);
+    }
+
+    public static List<Team> ControllerForReadTeamList() {
+
+        NodeList<Team> lista= ControllerForReadTeam();
+        List<Team> listCast = new ArrayList<>();
+
+        if(!lista.isEmpty()){
+            for (int i = 0; i < lista.getSize(); i++) {
+                listCast.add(lista.pop(i));
+            }
+        }
+        return listCast;
     }
 }

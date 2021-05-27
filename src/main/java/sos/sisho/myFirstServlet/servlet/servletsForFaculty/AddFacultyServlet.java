@@ -1,10 +1,8 @@
 package sos.sisho.myFirstServlet.servlet.servletsForFaculty;
 
 import client.dto.Faculty;
-import client.dto.Player;
 import controllers.controller.ControllerForFaculty;
-import controllers.controller.ControllerForPlayer;
-import sos.sisho.myFirstServlet.todo.service.TodoService;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,10 +15,9 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/add-faculty.do")
 public class AddFacultyServlet extends HttpServlet {
 
-    private static TodoService todoService = new TodoService();
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int idFaculty = Integer.parseInt(request.getParameter("txtIdModificarFacultad"));
+        int idFaculty = Integer.parseInt(request.getParameter("txtIdFacultad"));
         String name = request.getParameter("txtNombreFacultad");
         String code = request.getParameter("txtCodigoFacultad");
         
