@@ -16,9 +16,9 @@ public class DataSource {
 		try {
 			//conProperties.load(new FileInputStream("src/main/java/informationOfBD/persistence/data/connection.properties"));
 			Class.forName("org.postgresql.Driver");
-			String url = "jdbc:postgresql://localhost/postgres"; //conProperties.getProperty("url"); //
+			String url = "jdbc:postgresql://localhost:5432/torneo_unibague"; //conProperties.getProperty("url"); //
 			String user = "postgres";//conProperties.getProperty("user"); //
-			String password = "jorgerojas123";//conProperties.getProperty("password"); //
+			String password = "juanmene2021";//conProperties.getProperty("password"); //
 
 			con = DriverManager.getConnection(url.trim(), user.trim(), password.trim());
 

@@ -1,44 +1,50 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../common/navigation.jspf"%>
+
     <html>
     <head>
         <link href="webjars/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
         <title>Pagina Principal</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-            <div class="container-fluid">
-                <a class="navbar-brand" href="principal.do">Home</a>
+    <h1>PROYECTO DE ESTRUCTURA DE DATOS</h1>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" role="navigation">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <br><br>
+    <br><br>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current= "true" href="faculty.do">Facultades</a>
-                        </li>
+    <h3>
+        El presente proyecto fue desarrollado para la materia Estructura de Datos. Hace uso del estilo de arquitectura de software MVC (Modelo, Vista, Controlador) el cual separa los datos del aplicativo en tres componentes simultaneamente conectados.
+    </h3>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current= "true" href="team.do">Equipos</a>
-                        </li>
+    <img src="https://4.bp.blogspot.com/-0UHTgF1mNbA/W3wASAPmGOI/AAAAAAAAEjk/vwayCKAgpP0F9LpK_Sm2XuChGcLhT9cfACLcBGAs/s1600/MVC.png" id="mvc" alt="Image" class="img-fluid">
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current= "true" href="player.do">Jugadores</a>
-                        </li>
+    <h3>
+        De igual forma, el proyecto cuenta con la implementación de los principios basicos del POO denominados SOLID, los cuales hacen mencion de (Single responsibility, Open-closed, Liskov substitution, Interface segregation and Dependency inversion)
+    </h3>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#" onclick="alert('Proyecto Desarollado Por Jorge Rojas, Juan Meneses y Juan Gomez')">Acerca de</a>
-                        </li>
-                    </ul>
+    <br><br>
 
-                    <form class="d-flex" style="margin-top:13px;">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+    <img src="https://abhinavranaweb.files.wordpress.com/2019/01/solid-design-principles-2.jpg?w=1108&h=737&crop=1" id="acoplamiento" alt="Image" class="img-fluid">
 
-    <img  src="${pageContext.request.contextPath}/images/banner.png" id="banner" alt="Image" class="img-fluid">
+    <br><br>
+
+    <h3>
+        Para el desarrollo del proyecto se construyo e implemento una lista generica, por lo tanto no se hizo uso de la interfaz "Collection".
+
+    </h3>
+
+    <br><br>
+
+    <img src="https://digitaldefynd.com/wp-content/uploads/2018/07/best-data-structures-and-algorithms-course-tutorials-certification-class-online.jpg" id="list" alt="Image" class="img-fluid">
+
+    <h3>
+        De igual forma siempre se busco desacoplar las clases, es decir que no hubiera  gran dependencia entre ellas
+    </h3>
+
+    <br><br>
+
+    <img src="https://techandsolve.com/wp-content/uploads/2020/10/cohesion-acoplamiento.png" id="desacoplamiento" alt="Image" class="img-fluid">
 
     </body>
     </html>

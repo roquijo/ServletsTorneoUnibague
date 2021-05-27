@@ -1,4 +1,4 @@
- .tabla
+.table
 {
     background-color: lightblue;
     text-align: center;
@@ -8,6 +8,7 @@
     margin-right: 0;
     padding: 0;
 }
+
 
 th, td
 {
